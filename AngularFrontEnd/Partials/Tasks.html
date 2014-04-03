@@ -1,0 +1,38 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <tabset>
+            <tab ng-repeat="todoList in todoLists" select="setListId(todoList.Id)" active="todoList.active">
+                <tab-heading>{{ todoList.ListName }}</tab-heading>
+                <p/>
+
+                <div class="col-md-2 pull-right">
+                    <button class="btn btn-sm btn-warning" ng-click="deleteList(todoList.Id)">Delete this list</button>
+                </div>
+                
+                <div class="todolist">
+                    <div class="checkbox list col-md-10 clearfix" ng-repeat="todoItem in todoList.TodoItems">
+                        <label>
+                            <input type="checkbox" ng-click="deleteTodo(todoItem.Id)"> {{ todoItem.Description }}
+                        </label>
+                    </div>
+                </div>
+
+
+                <div id="todo-form col-md-12">
+                    <div class="col-sm-6 col-sm-offset-3 text-center">
+                        
+                        <form class="form-horizontal">
+                            <div class="form-group">
+
+                                <input type="text" class="form-control input-lg text-center" ng-model="formData.Description" autofocus>
+                                <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo(todoList.Id)">Add Todo</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                
+            </tab>
+        </tabset>
+    </div>
+</div>
