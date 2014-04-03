@@ -3,7 +3,7 @@ TodoListSandbox
 
 NancyFX todo list API with various front-ends.
 
-Lot's of cleanup work to do. Don't judge me.
+Lot's of cleanup work to do. Don't judge me. It's a sandbox, mmmkaaayyy?
 
 NancyFx API needs a couple of more end points set up.
 
